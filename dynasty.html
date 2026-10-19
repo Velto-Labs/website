@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynasty: Free E-Book by Brad DiPaolo | CandidateHub</title>
+    <meta name="description"
+        content="Get the free e-book Dynasty: Building Championship Teams in Sports and Business. The five pillars behind teams that win and keep winning, and the Dynasty Scorecard to rate your own.">
+    <link rel="canonical" href="https://candidatehub.io/dynasty">
+
+    <!-- Social sharing -->
+    <meta property="og:type" content="book">
+    <meta property="og:site_name" content="CandidateHub">
+    <meta property="og:url" content="https://candidatehub.io/dynasty">
+    <meta property="og:title" content="Dynasty: Building Championship Teams in Sports and Business">
+    <meta property="og:description"
+        content="High-performing teams aren't bought. They're built. Get the free e-book from Brad DiPaolo and score your team against the five pillars.">
+    <meta property="og:image" content="https://candidatehub.io/dynasty-og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Dynasty e-book cover by Brad DiPaolo">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dynasty: Building Championship Teams in Sports and Business">
+    <meta name="twitter:description"
+        content="High-performing teams aren't bought. They're built. Get the free e-book from Brad DiPaolo.">
+    <meta name="twitter:image" content="https://candidatehub.io/dynasty-og.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Logo.png" type="image/png">
+
+    <style>
+        :root {
+            --font-display: 'Bebas Neue', 'Outfit', sans-serif;
+            --gold: #FFC600;
+            --gold-soft: rgba(255, 198, 0, 0.14);
+            --line-light: #E1E4E8;
+            --danger: #C81E1E;
+            --danger-dark: #FF8A8A;
+            --success: #15803D;
+            --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        /* Accessible CTA: dark text on brand orange clears 4.5:1 */
+        .lp .btn-primary { color: #1A0E00; font-weight: 600; }
+        .lp .btn:focus-visible,
+        .lp a:focus-visible,
+        .lp button:focus-visible,
+        .lp summary:focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 3px;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: 1rem;
+            top: -100px;
+            z-index: 200;
+            background: var(--gold);
+            color: #040812;
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        .skip-link:focus { top: 1rem; }
+
+        /* ---------- Header ---------- */
+        .lp-header .header-container { height: 72px; }
+        .lp-header .logo a { display: flex; align-items: center; gap: 0.6rem; }
+        .lp-header .logo span { font-size: 1.15rem; }
+        .lp-header-cta { padding: 0.6rem 1.25rem; font-size: 0.95rem; }
+
+        /* ---------- Hero ---------- */
+        .lp-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 112px 0 88px;
+            background:
+                radial-gradient(ellipse 70% 60% at 85% 10%, rgba(45, 123, 191, 0.22), transparent 70%),
+                linear-gradient(180deg, #040812 0%, #071022 100%);
+        }
+        .lp-hero .orb-container { height: 100%; opacity: 0.7; }
+        .hero-grid {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+            gap: 4rem;
+            align-items: center;
+        }
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.9rem;
+            border-radius: 50px;
+            background: var(--gold-soft);
+            border: 1px solid rgba(255, 198, 0, 0.35);
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+        .hero-eyebrow svg { width: 16px; height: 16px; }
+        .lp-hero h1 {
+            font-size: clamp(2.4rem, 4.6vw, 3.9rem);
+            line-height: 1.04;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            text-wrap: balance;
+        }
+        .lp-hero h1 .hl { color: var(--gold); }
+        .hero-lede {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 560px;
+            margin-bottom: 2rem;
+        }
+        .hero-lede em { color: #fff; font-style: normal; font-weight: 600; }
+
+        .hero-benefits { list-style: none; display: grid; gap: 0.9rem; margin-bottom: 2.25rem; }
+        .hero-benefits li { display: flex; gap: 0.8rem; align-items: flex-start; font-size: 1.05rem; color: #E6EFFF; }
+        .check {
+            flex: 0 0 24px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--gold);
+            color: #040812;
+            display: grid;
+            place-items: center;
+            margin-top: 2px;
+        }
+        .check svg { width: 14px; height: 14px; }
+
+        .hero-meta { display: flex; flex-wrap: wrap; gap: 0.6rem 1.5rem; color: var(--text-secondary); font-size: 0.95rem; }
+        .hero-meta span { display: inline-flex; align-items: center; gap: 0.45rem; }
+        .hero-meta svg { width: 18px; height: 18px; color: var(--gold); }
+
+        /* ---------- Book cover ---------- */
+        .hero-side { display: flex; flex-direction: column; align-items: center; gap: 0; }
+        .book-stage { perspective: 1600px; width: 100%; display: flex; justify-content: center; margin-bottom: -64px; position: relative; z-index: 3; }
+        .book {
+            --w: 196px;
+            width: var(--w);
+            aspect-ratio: 2 / 3;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateY(-24deg) rotateX(4deg);
+            transition: transform 0.8s var(--ease-out);
+        }
+        .book:hover { transform: rotateY(-12deg) rotateX(2deg); }
+        .book::before { /* page edges */
+            content: "";
+            position: absolute;
+            top: 3px;
+            bottom: 3px;
+            right: 0;
+            width: 26px;
+            transform: translateX(13px) rotateY(90deg);
+            background: repeating-linear-gradient(90deg, #F4F1EA 0 2px, #DCD6C8 2px 3px);
+        }
+        .book::after { /* shadow */
+            content: "";
+            position: absolute;
+            left: 8%;
+            right: -6%;
+            bottom: -26px;
+            height: 30px;
+            background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.55), transparent 70%);
+            filter: blur(6px);
+            transform: translateZ(-40px);
+        }
+        .cover {
+            position: absolute;
+            inset: 0;
+            border-radius: 3px 8px 8px 3px;
+            overflow: hidden;
+            background:
+                linear-gradient(90deg, rgba(0, 0, 0, 0.45) 0, rgba(255, 255, 255, 0.08) 3%, transparent 7%),
+                radial-gradient(ellipse 90% 55% at 50% 0%, rgba(45, 123, 191, 0.55), transparent 70%),
+                linear-gradient(160deg, #0B1A33 0%, #050B17 100%);
+            box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.8), 0 0 80px rgba(255, 198, 0, 0.12);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 14% 10% 9%;
+        }
+        .cover-banners { display: flex; gap: 6px; margin-bottom: 12%; }
+        .cover-banners i {
+            display: block;
+            width: 18px;
+            height: 30px;
+            background: var(--gold);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 78%, 0 100%);
+            opacity: 0.95;
+        }
+        .cover-banners i:nth-child(2n) { height: 24px; opacity: 0.6; }
+        .cover-author { font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--secondary); margin-bottom: 4%; }
+        .cover-title {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            line-height: 0.85;
+            letter-spacing: 0.04em;
+            color: var(--gold);
+            text-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
+        }
+        .cover-rule { width: 40%; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 8% 0; }
+        .cover-sub { font-size: 0.72rem; line-height: 1.35; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: #E6EFFF; }
+
+        /* ---------- Form card ---------- */
+        .form-card {
+            position: relative;
+            width: 100%;
+            max-width: 460px;
+            background: #fff;
+            color: var(--text-dark);
+            border-radius: 20px;
+            padding: 84px 2rem 1.75rem;
+            box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.6);
+            scroll-margin-top: 96px;
+        }
+        .form-card h2 { font-size: 1.6rem; line-height: 1.2; text-align: center; margin-bottom: 0.35rem; }
+        .form-card .form-intro { text-align: center; color: var(--text-body); font-size: 0.98rem; margin-bottom: 1.4rem; }
+
+        .field { margin-bottom: 1rem; }
+        .field label { display: block; font-weight: 600; font-size: 0.92rem; margin-bottom: 0.35rem; }
+        .field label .opt { font-weight: 400; color: var(--text-body); }
+        .field input {
+            width: 100%;
+            min-height: 48px;
+            padding: 0.7rem 0.95rem;
+            border: 1.5px solid #C9D1DC;
+            border-radius: 10px;
+            font: inherit;
+            font-size: 1rem;
+            color: var(--text-dark);
+            background: #fff;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .field input:hover { border-color: #9AA8BA; }
+        .field input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 4px rgba(45, 123, 191, 0.18); }
+        .field input[aria-invalid="true"] { border-color: var(--danger); }
+        .field input[aria-invalid="true"]:focus { box-shadow: 0 0 0 4px rgba(200, 30, 30, 0.15); }
+        .field-error, .field-hint { font-size: 0.86rem; margin-top: 0.35rem; }
+        .field-error { color: var(--danger); display: flex; gap: 0.35rem; align-items: flex-start; }
+        .field-error[hidden], .field-hint[hidden] { display: none; }
+        .field-hint { color: var(--text-body); }
+        .field-hint button { background: none; border: 0; padding: 0; font: inherit; color: var(--primary); font-weight: 600; text-decoration: underline; cursor: pointer; }
+
+        .consent { display: flex; gap: 0.65rem; align-items: flex-start; margin: 0.4rem 0 1.25rem; font-size: 0.88rem; color: var(--text-body); line-height: 1.45; cursor: pointer; }
+        .consent input { width: 20px; height: 20px; margin-top: 1px; flex: 0 0 20px; accent-color: var(--primary); cursor: pointer; }
+
+        .hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; }
+
+        .submit-btn { width: 100%; min-height: 56px; font-size: 1.1rem; gap: 0.6rem; }
+        .submit-btn svg { width: 20px; height: 20px; }
+        .submit-btn[disabled] { cursor: progress; opacity: 0.85; transform: none; }
+        .spinner { width: 20px; height: 20px; border-radius: 50%; border: 2.5px solid rgba(26, 14, 0, 0.25); border-top-color: #1A0E00; animation: spin 0.8s linear infinite; display: none; }
+        .is-loading .spinner { display: inline-block; }
+        .is-loading .btn-arrow { display: none; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .form-fine { text-align: center; font-size: 0.82rem; color: var(--text-body); margin-top: 0.9rem; display: flex; align-items: center; justify-content: center; gap: 0.4rem; }
+        .form-fine svg { width: 14px; height: 14px; flex: 0 0 14px; }
+
+        .error-summary, .submit-error {
+            border: 1.5px solid var(--danger);
+            background: #FFF5F5;
+            border-radius: 10px;
+            padding: 0.85rem 1rem;
+            margin-bottom: 1.1rem;
+            font-size: 0.92rem;
+            color: #7A1212;
+        }
+        .error-summary:focus, .submit-error:focus { outline: 3px solid rgba(200, 30, 30, 0.35); outline-offset: 2px; }
+        .error-summary h3, .submit-error h3 { font-size: 0.98rem; margin-bottom: 0.3rem; }
+        .error-summary ul { padding-left: 1.1rem; }
+        .error-summary a { color: #7A1212; text-decoration: underline; }
+        .submit-error a { color: #7A1212; text-decoration: underline; font-weight: 600; }
+
+        .form-success { text-align: center; padding: 0.5rem 0 0.25rem; }
+        .form-success:focus { outline: none; }
+        .success-icon { width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 1rem; background: #E8F7EE; color: var(--success); display: grid; place-items: center; }
+        .success-icon svg { width: 32px; height: 32px; }
+        .form-success h2 { margin-bottom: 0.5rem; }
+        .form-success p { color: var(--text-body); margin-bottom: 1rem; }
+        .form-success .next-step { background: var(--bg-offwhite); border: 1px solid var(--line-light); border-radius: 12px; padding: 1rem; text-align: left; font-size: 0.95rem; margin-top: 1.25rem; }
+        .form-success .next-step strong { display: block; color: var(--text-dark); margin-bottom: 0.25rem; }
+        .form-success .next-step a { color: var(--primary); font-weight: 600; }
+
+        /* ---------- Generic sections ---------- */
+        .lp-section { padding: 6.5rem 0; }
+        .lp-section h2.section-title { font-size: clamp(2rem, 3.6vw, 2.75rem); letter-spacing: -0.01em; text-wrap: balance; }
+        .lp-section .section-subtitle { color: var(--text-body); }
+        .section-dark { background: var(--bg-primary); color: #fff; }
+        .section-dark .section-subtitle { color: var(--text-secondary); }
+        .eyebrow-gold { color: #9A6B00; }
+        .section-dark .eyebrow-gold { color: var(--gold); }
+
+        /* Stats / scoreboard */
+        .scoreboard { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; margin-top: 3.5rem; }
+        .score-tile { background: #fff; border: 1px solid var(--line-light); border-radius: 16px; padding: 1.75rem 1.5rem; text-align: left; }
+        .score-num { font-family: var(--font-display); font-size: 3.6rem; line-height: 0.9; color: var(--primary); letter-spacing: 0.02em; margin-bottom: 0.75rem; }
+        .score-label { color: var(--text-dark); font-weight: 500; font-size: 1rem; line-height: 1.45; }
+        .score-src { display: block; margin-top: 0.75rem; font-size: 0.8rem; color: var(--text-body); }
+        .stats-foot { margin-top: 2.5rem; font-size: 1.15rem; color: var(--text-dark); font-weight: 500; }
+
+        /* Pillars */
+        .pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; margin-top: 3.5rem; }
+        .pillar {
+            position: relative;
+            background: #fff;
+            border: 1px solid var(--line-light);
+            border-radius: 18px;
+            padding: 2rem 1.75rem 1.75rem;
+            overflow: hidden;
+            transition: transform 0.25s var(--ease-out), box-shadow 0.25s, border-color 0.25s;
+        }
+        .pillar:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -18px rgba(13, 17, 23, 0.25); border-color: rgba(45, 123, 191, 0.35); }
+        .pillar-num {
+            font-family: var(--font-display);
+            font-size: 5.5rem;
+            line-height: 0.8;
+            color: transparent;
+            -webkit-text-stroke: 2px rgba(45, 123, 191, 0.28);
+            position: absolute;
+            top: 1.1rem;
+            right: 1.25rem;
+            pointer-events: none;
+        }
+        .pillar-ch { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--primary); margin-bottom: 0.6rem; }
+        .pillar h3 { font-size: 1.35rem; line-height: 1.25; margin-bottom: 0.6rem; color: var(--text-dark); padding-right: 3.5rem; }
+        .pillar p { color: var(--text-body); font-size: 0.98rem; margin-bottom: 1.25rem; }
+        .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+        .tags span { font-size: 0.78rem; font-weight: 500; padding: 0.25rem 0.65rem; border-radius: 50px; background: var(--bg-offwhite); border: 1px solid var(--line-light); color: var(--text-body); }
+        .pillar-dark { background: linear-gradient(160deg, #0B1A33, #040812); border-color: rgba(255, 198, 0, 0.35); color: #fff; }
+        .pillar-dark .pillar-num { -webkit-text-stroke-color: rgba(255, 198, 0, 0.45); }
+        .pillar-dark .pillar-ch { color: var(--gold); }
+        .pillar-dark h3 { color: #fff; }
+        .pillar-dark p { color: var(--text-secondary); }
+        .pillar-dark .tags span { background: rgba(255, 255, 255, 0.06); border-color: rgba(191, 218, 255, 0.18); color: var(--secondary); }
+
+        /* Quote */
+        .quote-section { position: relative; overflow: hidden; padding: 7rem 0; text-align: center; }
+        .quote-section blockquote { max-width: 900px; margin: 0 auto; }
+        .quote-section blockquote p {
+            font-size: clamp(1.7rem, 3.4vw, 2.6rem);
+            line-height: 1.25;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            text-wrap: balance;
+        }
+        .quote-section blockquote p .hl { color: var(--gold); }
+        .quote-section cite { display: block; margin-top: 1.5rem; font-style: normal; color: var(--text-secondary); font-size: 1rem; }
+        .quote-mark { width: 56px; height: 56px; color: var(--gold); margin: 0 auto 1.5rem; display: block; opacity: 0.9; }
+
+        /* Scorecard */
+        .scorecard-wrap { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr); gap: 2rem; margin-top: 3rem; align-items: start; }
+        .score-q { background: #fff; border: 1px solid var(--line-light); border-radius: 14px; padding: 1.25rem 1.4rem; margin-bottom: 0.9rem; border-left: 4px solid var(--line-light); transition: border-color 0.2s; }
+        .score-q.answered { border-left-color: var(--primary); }
+        .score-q fieldset { border: 0; }
+        .score-q legend { font-weight: 600; color: var(--text-dark); font-size: 1.02rem; line-height: 1.4; margin-bottom: 0.85rem; padding: 0; }
+        .score-q legend small { display: block; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--primary); margin-bottom: 0.3rem; font-weight: 600; }
+        .rating { display: inline-grid; grid-template-columns: repeat(5, auto); gap: 0.5rem; position: relative; }
+        .rating input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+        .rating label {
+            min-width: 48px;
+            height: 44px;
+            border-radius: 10px;
+            border: 1.5px solid #C9D1DC;
+            display: grid;
+            place-items: center;
+            font-weight: 600;
+            color: var(--text-dark);
+            cursor: pointer;
+            transition: background 0.15s, border-color 0.15s, color 0.15s, transform 0.15s;
+            user-select: none;
+        }
+        .rating label:hover { border-color: var(--primary); }
+        .rating input:checked + label { background: var(--primary); border-color: var(--primary); color: #fff; }
+        .rating input:focus-visible + label { outline: 3px solid var(--gold); outline-offset: 2px; }
+        .rating-ends { grid-column: 1 / -1; display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--text-body); margin-top: -0.1rem; }
+
+        .score-panel { position: sticky; top: 100px; background: linear-gradient(160deg, #0B1A33, #040812); color: #fff; border-radius: 20px; padding: 2rem; text-align: center; border: 1px solid rgba(255, 198, 0, 0.3); }
+        .score-panel .label { font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--secondary); }
+        .score-big { font-family: var(--font-display); font-size: 6rem; line-height: 1; color: var(--gold); margin: 0.5rem 0 0; font-variant-numeric: tabular-nums; }
+        .score-big small { font-size: 2.2rem; color: rgba(191, 218, 255, 0.6); }
+        .score-tier { font-size: 1.3rem; font-weight: 700; margin: 0.25rem 0 0.6rem; min-height: 1.6em; }
+        .score-msg { color: var(--text-secondary); font-size: 0.98rem; min-height: 4.5em; margin-bottom: 1.5rem; }
+        .score-progress { height: 8px; border-radius: 99px; background: rgba(255, 255, 255, 0.1); overflow: hidden; margin: 1rem 0 1.25rem; }
+        .score-progress i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--primary), var(--gold)); border-radius: 99px; transition: width 0.5s var(--ease-out); }
+        .score-panel .btn { width: 100%; }
+        .score-note { font-size: 0.82rem; color: rgba(191, 218, 255, 0.75); margin-top: 0.9rem; }
+
+        /* Author */
+        .author { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 4rem; align-items: center; max-width: 1000px; margin: 0 auto; }
+        .author-photo { position: relative; }
+        .author-photo img { width: 100%; height: auto; aspect-ratio: 373 / 560; object-fit: cover; border-radius: 20px; display: block; box-shadow: 0 30px 60px -25px rgba(13, 17, 23, 0.45); }
+        .author-badge {
+            position: absolute;
+            right: -18px;
+            bottom: 28px;
+            background: var(--gold);
+            color: #040812;
+            border-radius: 14px;
+            padding: 0.7rem 1rem;
+            font-weight: 700;
+            font-size: 0.9rem;
+            line-height: 1.2;
+            box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.4);
+            text-align: center;
+        }
+        .author-badge b { display: block; font-family: var(--font-display); font-size: 1.9rem; font-weight: 400; line-height: 0.9; }
+        .author h2 { margin-bottom: 1rem; }
+        .author p { color: var(--text-body); font-size: 1.05rem; margin-bottom: 1rem; }
+        .author-creds { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem 1.5rem; margin-top: 1.5rem; }
+        .author-creds li { display: flex; gap: 0.6rem; align-items: flex-start; color: var(--text-dark); font-weight: 500; font-size: 0.97rem; }
+        .author-creds svg { width: 20px; height: 20px; color: var(--primary); flex: 0 0 20px; margin-top: 2px; }
+
+        /* FAQ */
+        .faq { max-width: 780px; margin: 3rem auto 0; }
+        .faq details { border-bottom: 1px solid var(--line-light); }
+        .faq summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 1.35rem 0;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+        .faq summary::-webkit-details-marker { display: none; }
+        .faq summary svg { width: 22px; height: 22px; flex: 0 0 22px; color: var(--primary); transition: transform 0.25s var(--ease-out); }
+        .faq details[open] summary svg { transform: rotate(45deg); }
+        .faq details p { color: var(--text-body); padding: 0 2.5rem 1.4rem 0; font-size: 1.02rem; }
+
+        /* Final CTA */
+        .final-cta { position: relative; overflow: hidden; text-align: center; padding: 7rem 0; }
+        .final-cta h2 { font-size: clamp(2.2rem, 4.4vw, 3.4rem); line-height: 1.1; margin-bottom: 1rem; text-wrap: balance; }
+        .final-cta p { color: var(--text-secondary); font-size: 1.15rem; max-width: 620px; margin: 0 auto 2.25rem; }
+        .final-cta .btn { gap: 0.6rem; }
+        .final-cta .btn svg { width: 20px; height: 20px; }
+        .banner-row { position: absolute; top: 0; left: 50%; transform: translateX(-50%); display: flex; gap: 28px; opacity: 0.12; pointer-events: none; }
+        .banner-row i { display: block; width: 54px; height: 110px; background: var(--gold); clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 82%, 0 100%); }
+        .banner-row i:nth-child(odd) { height: 84px; }
+
+        /* Footer */
+        .lp-footer { background: #03060E; border-top: 1px solid var(--border-glass); padding: 2.25rem 0; }
+        .lp-footer .container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; color: var(--text-secondary); font-size: 0.88rem; }
+        .lp-footer a.logo { display: flex; align-items: center; gap: 0.5rem; color: #fff; font-weight: 700; }
+        .lp-footer a.logo img { height: 22px; width: auto; }
+
+        /* Sticky mobile CTA */
+        .sticky-cta {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 90;
+            padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
+            background: rgba(4, 8, 18, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-top: 1px solid var(--border-glass);
+            transform: translateY(110%);
+            transition: transform 0.3s var(--ease-out);
+            display: none;
+        }
+        .sticky-cta.show { transform: translateY(0); }
+        .sticky-cta .btn { width: 100%; min-height: 52px; }
+
+        /* Reveal on scroll */
+        .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
+        .reveal.in { opacity: 1; transform: none; }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 1024px) {
+            .hero-grid { gap: 2.5rem; }
+            .scoreboard { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .pillars { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .author { grid-template-columns: 240px minmax(0, 1fr); gap: 2.5rem; }
+        }
+        @media (max-width: 900px) {
+            /* Single column: pull the form up right after the intro so it's reachable fast on phones */
+            .hero-grid { grid-template-columns: 1fr; gap: 0; }
+            .hero-copy { display: contents; }
+            .hero-eyebrow { order: 1; justify-self: start; }
+            .lp-hero h1 { order: 2; }
+            .hero-lede { order: 3; }
+            .hero-side { order: 4; margin-bottom: 2.5rem; }
+            .hero-benefits { order: 5; }
+            .hero-meta { order: 6; }
+            .book { --w: 150px; }
+            .cover-title { font-size: 2.7rem; }
+            .book-stage { margin-bottom: -48px; }
+            .form-card { padding-top: 68px; max-width: 520px; }
+            .scorecard-wrap { grid-template-columns: 1fr; }
+            .score-panel { position: static; }
+        }
+        @media (max-width: 768px) {
+            .lp-hero { padding: 104px 0 64px; }
+            .lp-header-cta { display: none; }
+            .sticky-cta { display: block; }
+            .lp-section, .quote-section, .final-cta { padding: 4.5rem 0; }
+            .pillars { grid-template-columns: 1fr; }
+            .author { grid-template-columns: 1fr; text-align: left; }
+            .author-photo { max-width: 260px; }
+            .author-creds { grid-template-columns: 1fr; }
+            .lp-footer .container { justify-content: center; text-align: center; }
+            body.lp { padding-bottom: 76px; }
+        }
+        @media (max-width: 480px) {
+            .container { padding: 0 16px; }
+            .scoreboard { grid-template-columns: 1fr; }
+            .form-card { padding: 72px 1.25rem 1.5rem; border-radius: 16px; }
+            .hero-lede { font-size: 1.08rem; }
+            .rating label { min-width: 44px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+            .reveal { opacity: 1; transform: none; }
+            .book, .book:hover { transform: rotateY(-18deg); }
+        }
+    </style>
+</head>
+
+<body class="lp">
+    <a class="skip-link" href="#get-the-book">Skip to the sign-up form</a>
+
+    <!-- Header -->
+    <header class="site-header glass-panel lp-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="/" aria-label="CandidateHub home">
+                    <img src="Logo.png" alt="" class="logo-img" width="32" height="32">
+                    <span>CandidateHub</span>
+                </a>
+            </div>
+            <a href="#get-the-book" class="btn btn-primary lp-header-cta js-to-form">Get the free e-book</a>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- Hero -->
+        <section class="lp-hero" aria-labelledby="hero-title">
+            <div class="orb-container" aria-hidden="true">
+                <div class="living-orb layer-2"></div>
+                <div class="living-orb layer-3"></div>
+            </div>
+
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <span class="hero-eyebrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        Free e-book by Brad DiPaolo
+                    </span>
+                    <h1 id="hero-title">High-performing teams aren't bought. <span class="hl">They're built.</span></h1>
+                    <p class="hero-lede">
+                        <em>Dynasty</em> is a playbook for CEOs and HR leaders on what the Bulls, Patriots,
+                        Canadiens, McDonald's and Netflix got right about talent, and what they got wrong when it
+                        all fell apart.
+                    </p>
+
+                    <ul class="hero-benefits">
+                        <li>
+                            <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                            Find the stars already on your roster before you pay a premium for outside talent
+                        </li>
+                        <li>
+                            <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                            Build a bench that holds up when your best people leave
+                        </li>
+                        <li>
+                            <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                            Spot the five early warning signs that bring champions down
+                        </li>
+                        <li>
+                            <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                            Score your team with the 15-question Dynasty Scorecard
+                        </li>
+                    </ul>
+
+                    <div class="hero-meta">
+                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>6 chapters + scorecard</span>
+                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>About a 45-minute read</span>
+                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Free PDF, sent by email</span>
+                    </div>
+                </div>
+
+                <div class="hero-side">
+                    <div class="book-stage" aria-hidden="true">
+                        <div class="book">
+                            <div class="cover">
+                                <div class="cover-banners"><i></i><i></i><i></i><i></i><i></i></div>
+                                <div class="cover-author">Brad DiPaolo</div>
+                                <div class="cover-title">Dynasty</div>
+                                <div class="cover-rule"></div>
+                                <div class="cover-sub">Building Championship Teams in Sports and Business</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-card" id="get-the-book" tabindex="-1">
+                        <div id="formView">
+                            <h2>Get your free copy</h2>
+                            <p class="form-intro">Tell us where to send it. It arrives in your inbox in about a minute.</p>
+
+                            <div class="error-summary" id="errorSummary" role="alert" tabindex="-1" hidden>
+                                <h3>Please fix the following:</h3>
+                                <ul id="errorList"></ul>
+                            </div>
+                            <div class="submit-error" id="submitError" role="alert" tabindex="-1" hidden>
+                                <h3>That didn't go through.</h3>
+                                <p>Check your connection and try again. If it keeps happening, <a href="/contact">let us know</a> and we'll send the book over directly.</p>
+                            </div>
+
+                            <form id="ebookForm" novalidate
+                                data-endpoint="REPLACE_WITH_APPS_SCRIPT_WEB_APP_URL">
+                                <div class="field">
+                                    <label for="firstName">First name</label>
+                                    <input id="firstName" name="firstName" type="text" autocomplete="given-name"
+                                        required maxlength="80" aria-describedby="firstNameError">
+                                    <p class="field-error" id="firstNameError" hidden></p>
+                                </div>
+                                <div class="field">
+                                    <label for="email">Work email</label>
+                                    <input id="email" name="email" type="email" autocomplete="email" inputmode="email"
+                                        required maxlength="254" spellcheck="false" autocapitalize="off"
+                                        aria-describedby="emailError emailHint">
+                                    <p class="field-error" id="emailError" hidden></p>
+                                    <p class="field-hint" id="emailHint" hidden></p>
+                                </div>
+
+                                <div class="hp" aria-hidden="true">
+                                    <label for="website">Leave this field empty</label>
+                                    <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+                                </div>
+
+                                <label class="consent" for="consent">
+                                    <input id="consent" name="consent" type="checkbox" value="yes">
+                                    <span>Also send me occasional insights from Brad and CandidateHub on building great teams. Unsubscribe anytime.</span>
+                                </label>
+
+                                <button type="submit" class="btn btn-primary submit-btn" id="submitBtn">
+                                    <span class="spinner" aria-hidden="true"></span>
+                                    <span class="btn-label">Send me the e-book</span>
+                                    <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                </button>
+                                <p class="form-fine">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                    Free. No credit card. We never sell or share your info.
+                                </p>
+                            </form>
+                        </div>
+
+                        <div class="form-success" id="successView" tabindex="-1" hidden>
+                            <div class="success-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                            </div>
+                            <h2 id="successTitle">It's on the way!</h2>
+                            <p>Check <strong id="successEmail">your inbox</strong> for an email from Brad DiPaolo with <em>Dynasty</em> attached. If you don't see it in a few minutes, check your Promotions or Spam folder.</p>
+                            <div class="next-step">
+                                <strong>While you wait: score your team</strong>
+                                Take the quick 5-question <a href="#scorecard">Dynasty Score check</a> below, then compare it with the full scorecard at the back of the book.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The cost of chasing free agents -->
+        <section class="lp-section section-light" aria-labelledby="stats-title">
+            <div class="container text-center">
+                <span class="eyebrow">Why it matters</span>
+                <h2 class="section-title text-dark" id="stats-title">Most companies are overpaying for free agents.</h2>
+                <p class="section-subtitle">
+                    It feels easier to assume the answer is out there somewhere. The research says the answer is usually
+                    already on your payroll.
+                </p>
+
+                <div class="scoreboard">
+                    <div class="score-tile reveal">
+                        <div class="score-num">18%</div>
+                        <div class="score-label">more paid for external hires, who perform worse in their first two years than internal promotions</div>
+                        <span class="score-src">Matthew Bidwell, Wharton</span>
+                    </div>
+                    <div class="score-tile reveal">
+                        <div class="score-num">2 yrs</div>
+                        <div class="score-label">for an external hire to get fully up to speed, while your internal talent could be ready today</div>
+                        <span class="score-src">Matthew Bidwell, Wharton</span>
+                    </div>
+                    <div class="score-tile reveal">
+                        <div class="score-num">41%</div>
+                        <div class="score-label">longer tenure at organizations that focus on internal mobility</div>
+                        <span class="score-src">LinkedIn Global Talent Trends</span>
+                    </div>
+                    <div class="score-tile reveal">
+                        <div class="score-num">&lt;&#8531;</div>
+                        <div class="score-label">of hires are internal promotions, even though the data favours growing your own</div>
+                        <span class="score-src">LinkedIn Global Talent Trends</span>
+                    </div>
+                </div>
+                <p class="stats-foot">Easy doesn't win championships. <a href="#get-the-book" class="text-blue js-to-form" style="font-weight:600;">Get the playbook that does&nbsp;&rarr;</a></p>
+            </div>
+        </section>
+
+        <!-- Five pillars -->
+        <section class="lp-section section-offwhite" aria-labelledby="pillars-title">
+            <div class="container">
+                <div class="text-center">
+                    <span class="eyebrow">What's inside</span>
+                    <h2 class="section-title text-dark" id="pillars-title">The five pillars every dynasty is built on</h2>
+                    <p class="section-subtitle">
+                        Each chapter pairs a championship franchise with a company that's done the same thing in business,
+                        then turns it into a playbook you can run with your own team.
+                    </p>
+                </div>
+
+                <div class="pillars">
+                    <article class="pillar reveal">
+                        <span class="pillar-num" aria-hidden="true">01</span>
+                        <div class="pillar-ch">Chapter 1</div>
+                        <h3>Know Your Roster</h3>
+                        <p>Look at your team the way a GM looks at a lineup. Who's capable of more? Who's playing out of position? Who's sitting on the bench?</p>
+                        <div class="tags"><span>Chicago Bulls</span><span>IBM</span><span>McDonald's</span></div>
+                    </article>
+                    <article class="pillar reveal">
+                        <span class="pillar-num" aria-hidden="true">02</span>
+                        <div class="pillar-ch">Chapter 2</div>
+                        <h3>Build the Pipeline</h3>
+                        <p>Build a real farm system with leadership programs, upskilling and career paths, so the next person up is actually ready.</p>
+                        <div class="tags"><span>Montreal Canadiens</span><span>San Antonio Spurs</span><span>Amazon</span></div>
+                    </article>
+                    <article class="pillar reveal">
+                        <span class="pillar-num" aria-hidden="true">03</span>
+                        <div class="pillar-ch">Chapter 3</div>
+                        <h3>Scout for Fit</h3>
+                        <p>Recruit for fit, grit and long-term impact. Talent that doesn't fit your system is a liability wearing an asset's jersey.</p>
+                        <div class="tags"><span>New England Patriots</span><span>Amazon Bar Raisers</span><span>Netflix</span></div>
+                    </article>
+                    <article class="pillar reveal">
+                        <span class="pillar-num" aria-hidden="true">04</span>
+                        <div class="pillar-ch">Chapter 4</div>
+                        <h3>Build Chemistry</h3>
+                        <p>Trust, clear roles and psychological safety are what hold a team together when the game is on the line.</p>
+                        <div class="tags"><span>Golden State Warriors</span><span>Pixar</span><span>Google</span></div>
+                    </article>
+                    <article class="pillar reveal">
+                        <span class="pillar-num" aria-hidden="true">05</span>
+                        <div class="pillar-ch">Chapter 5</div>
+                        <h3>Train with Purpose</h3>
+                        <p>Nobody rises to the occasion. They fall to the level of their training. Here's how to practise like it matters.</p>
+                        <div class="tags"><span>Bill Belichick</span><span>Toyota</span><span>Hamburger University</span></div>
+                    </article>
+                    <article class="pillar pillar-dark reveal">
+                        <span class="pillar-num" aria-hidden="true">06</span>
+                        <div class="pillar-ch">Chapter 6</div>
+                        <h3>When Dynasties Die</h3>
+                        <p>The same five pillars that build a dynasty end one. Six collapses, and the warning signs each one ignored.</p>
+                        <div class="tags"><span>Kodak</span><span>Blockbuster</span><span>WeWork</span><span>Southwest</span></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pull quote -->
+        <section class="quote-section section-dark" aria-label="Quote from the book">
+            <div class="orb-container" aria-hidden="true" style="opacity:0.45;">
+                <div class="living-orb layer-2"></div>
+            </div>
+            <div class="container z-10">
+                <blockquote class="reveal">
+                    <svg class="quote-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.5 6C6.5 7 4 9.8 4 13.5V18h6v-6H7c0-2 1.2-3.6 3.2-4.3zM19.5 6c-3 1-5.5 3.8-5.5 7.5V18h6v-6h-3c0-2 1.2-3.6 3.2-4.3z"/></svg>
+                    <p>You don't need a bigger budget to start building your dynasty. <span class="hl">You need to actually look.</span></p>
+                    <cite>Brad DiPaolo, <em>Dynasty</em></cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- Mini scorecard -->
+        <section class="lp-section section-light" id="scorecard" aria-labelledby="scorecard-title">
+            <div class="container">
+                <div class="text-center">
+                    <span class="eyebrow">Try it now</span>
+                    <h2 class="section-title text-dark" id="scorecard-title">How dynasty-ready is your team?</h2>
+                    <p class="section-subtitle">
+                        One question from each pillar. Rate each statement honestly from 1 (not at all true) to 5 (completely true).
+                        The full 15-question scorecard is in the book.
+                    </p>
+                </div>
+
+                <div class="scorecard-wrap">
+                    <div id="scoreQuestions"></div>
+
+                    <aside class="score-panel" aria-labelledby="scorePanelLabel">
+                        <div class="label" id="scorePanelLabel">Your quick Dynasty Score</div>
+                        <div class="score-big" aria-hidden="true"><span id="scoreValue">0</span><small>/25</small></div>
+                        <div class="score-progress" aria-hidden="true"><i id="scoreBar"></i></div>
+                        <div aria-live="polite" aria-atomic="true">
+                            <div class="score-tier" id="scoreTier">Answer all five</div>
+                            <p class="score-msg" id="scoreMsg">Your result and the chapter your team needs most will show up here.</p>
+                        </div>
+                        <a href="#get-the-book" class="btn btn-primary js-to-form" id="scoreCta">Get the full scorecard</a>
+                        <p class="score-note">Your answers stay in your browser.</p>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Author -->
+        <section class="lp-section section-offwhite" aria-labelledby="author-title">
+            <div class="container">
+                <div class="author">
+                    <div class="author-photo reveal">
+                        <img src="dynasty-author.jpg" alt="Brad DiPaolo, author of Dynasty and founder of CandidateHub"
+                            width="373" height="560" loading="lazy" decoding="async">
+                        <div class="author-badge"><b>TA Top 100</b>thought leader</div>
+                    </div>
+                    <div class="reveal">
+                        <span class="eyebrow">About the author</span>
+                        <h2 class="section-title text-dark" id="author-title">Written by someone who came up through the roster</h2>
+                        <p>
+                            Brad DiPaolo started out as an "order taker" setting up home phone systems, moved into cellular sales,
+                            and worked his way up to HR Manager at the same company. He has seen firsthand what happens when a
+                            business grows its own people.
+                        </p>
+                        <p>
+                            Today he's the founder of CandidateHub, a podcaster, and a recognized TA Top 100 thought leader in
+                            talent acquisition. He's had hundreds of conversations with HR leaders about why companies still
+                            struggle to make the most of the talent they already have.
+                        </p>
+                        <ul class="author-creds">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>20+ years across sales, marketing and HR</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Founder of CandidateHub</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>Podcaster and entrepreneur</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Gives back through the Greater Moncton Progress Club</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="lp-section section-light" aria-labelledby="faq-title">
+            <div class="container">
+                <div class="text-center">
+                    <span class="eyebrow">Questions</span>
+                    <h2 class="section-title text-dark" id="faq-title">Before you grab your copy</h2>
+                </div>
+                <div class="faq">
+                    <details>
+                        <summary>Is it really free?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                        </summary>
+                        <p>Yes. No credit card and no trial. Enter your name and email and the PDF comes straight to your inbox.</p>
+                    </details>
+                    <details>
+                        <summary>Who is it for?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                        </summary>
+                        <p>CEOs, founders, people leaders and talent acquisition teams at growing companies. It's for anyone responsible for building a team that keeps winning after the first big season.</p>
+                    </details>
+                    <details>
+                        <summary>Do I need to be a sports fan?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                        </summary>
+                        <p>Not at all. The sports stories make the lessons stick, but every chapter pairs them with business examples like McDonald's, IBM, Google, Netflix and Toyota, plus a practical playbook.</p>
+                    </details>
+                    <details>
+                        <summary>What format is it, and how long does it take to read?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                        </summary>
+                        <p>It's a PDF that reads well on a phone, tablet or desktop. Six short chapters plus the Dynasty Scorecard, about a 45-minute read.</p>
+                    </details>
+                    <details>
+                        <summary>Will you spam me?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                        </summary>
+                        <p>No. You'll get the e-book. You'll only hear from us again if you tick the box to receive occasional insights, and you can unsubscribe anytime. We never sell or share your information.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta section-dark" aria-labelledby="final-title">
+            <div class="banner-row" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="container z-10">
+                <h2 id="final-title">Stop chasing the next superstar.<br><span style="color: var(--gold);">Start building the one you have.</span></h2>
+                <p>Get <em>Dynasty</em> free and find out which chapter your organization needs most right now.</p>
+                <a href="#get-the-book" class="btn btn-primary btn-large js-to-form">
+                    Send me the free e-book
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="lp-footer">
+        <div class="container">
+            <a href="/" class="logo"><img src="Logo.png" alt="" width="22" height="22">CandidateHub</a>
+            <span>&copy; 2026 CandidateHub. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <div class="sticky-cta" id="stickyCta">
+        <a href="#get-the-book" class="btn btn-primary js-to-form">Get the free e-book</a>
+    </div>
+
+    <script>
+        (function () {
+            'use strict';
+
+            var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            /* ---------- Attribution (UTM params survive in-page navigation) ---------- */
+            var TRACK_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid', 'li_fat_id', 'gclid'];
+            var attribution = {};
+            try {
+                var stored = JSON.parse(sessionStorage.getItem('dynasty_attr') || '{}');
+                attribution = stored && typeof stored === 'object' ? stored : {};
+            } catch (e) { attribution = {}; }
+            var params = new URLSearchParams(window.location.search);
+            TRACK_KEYS.forEach(function (k) { if (params.get(k)) attribution[k] = params.get(k).slice(0, 200); });
+            if (!attribution.referrer && document.referrer) attribution.referrer = document.referrer.slice(0, 300);
+            if (!attribution.landing_url) attribution.landing_url = window.location.href.slice(0, 500);
+            try { sessionStorage.setItem('dynasty_attr', JSON.stringify(attribution)); } catch (e) { /* storage unavailable */ }
+
+            /* ---------- Scroll-to-form CTAs ---------- */
+            var formCard = document.getElementById('get-the-book');
+            var firstInput = document.getElementById('firstName');
+            document.querySelectorAll('.js-to-form').forEach(function (el) {
+                el.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    formCard.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+                    var successShown = !document.getElementById('successView').hidden;
+                    setTimeout(function () {
+                        (successShown ? document.getElementById('successView') : firstInput).focus({ preventScroll: true });
+                    }, reduceMotion ? 0 : 450);
+                });
+            });
+            document.querySelectorAll('a[href="#scorecard"]').forEach(function (el) {
+                el.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.getElementById('scorecard').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
+                });
+            });
+
+            /* ---------- Reveal on scroll ---------- */
+            var reveals = document.querySelectorAll('.reveal');
+            if (reduceMotion || !('IntersectionObserver' in window)) {
+                reveals.forEach(function (el) { el.classList.add('in'); });
+            } else {
+                var ro = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) { entry.target.classList.add('in'); ro.unobserve(entry.target); }
+                    });
+                }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+                reveals.forEach(function (el, i) {
+                    el.style.transitionDelay = (i % 3) * 80 + 'ms';
+                    ro.observe(el);
+                });
+            }
+
+            /* ---------- Sticky mobile CTA: only while the form is off-screen ---------- */
+            var sticky = document.getElementById('stickyCta');
+            var finalCta = document.querySelector('.final-cta');
+            var formVisible = true, finalVisible = false, converted = false;
+            function updateSticky() {
+                sticky.classList.toggle('show', !formVisible && !finalVisible && !converted);
+            }
+            if ('IntersectionObserver' in window) {
+                new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.target === formCard) formVisible = entry.isIntersecting;
+                        if (entry.target === finalCta) finalVisible = entry.isIntersecting;
+                    });
+                    updateSticky();
+                }, { threshold: 0.15 }).observe(formCard);
+                new IntersectionObserver(function (entries) {
+                    finalVisible = entries[0].isIntersecting; updateSticky();
+                }, { threshold: 0.3 }).observe(finalCta);
+            }
+
+            /* ---------- Mini Dynasty Scorecard ---------- */
+            var QUESTIONS = [
+                { pillar: 'Know Your Roster', chapter: 'Chapter 1', text: 'I could name, right now, who on my team is capable of more than their current role asks of them.' },
+                { pillar: 'Build the Pipeline', chapter: 'Chapter 2', text: 'If my top three people left tomorrow, there’s a real (not theoretical) plan for each seat.' },
+                { pillar: 'Scout for Fit', chapter: 'Chapter 3', text: 'Our last few hires strengthened team chemistry, not just the talent bar.' },
+                { pillar: 'Build Chemistry', chapter: 'Chapter 4', text: 'People on my team feel safe telling me when something’s wrong.' },
+                { pillar: 'Train with Purpose', chapter: 'Chapter 5', text: 'We rehearse for high-pressure scenarios before they happen, not during.' }
+            ];
+            var answers = new Array(QUESTIONS.length).fill(0);
+            var qWrap = document.getElementById('scoreQuestions');
+            QUESTIONS.forEach(function (q, i) {
+                var card = document.createElement('div');
+                card.className = 'score-q reveal in';
+                var html = '<fieldset><legend><small>Pillar ' + (i + 1) + ': ' + q.pillar + '</small>' + q.text + '</legend><div class="rating">';
+                for (var v = 1; v <= 5; v++) {
+                    var id = 'q' + i + 'v' + v;
+                    html += '<input type="radio" name="q' + i + '" id="' + id + '" value="' + v + '">' +
+                        '<label for="' + id + '"><span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">Rating </span>' + v + '</label>';
+                }
+                html += '<div class="rating-ends" aria-hidden="true"><span>Not at all true</span><span>Completely true</span></div></div></fieldset>';
+                card.innerHTML = html;
+                card.addEventListener('change', function (e) {
+                    answers[i] = parseInt(e.target.value, 10) || 0;
+                    card.classList.add('answered');
+                    renderScore();
+                });
+                qWrap.appendChild(card);
+            });
+
+            var scoreValue = document.getElementById('scoreValue');
+            var scoreBar = document.getElementById('scoreBar');
+            var scoreTier = document.getElementById('scoreTier');
+            var scoreMsg = document.getElementById('scoreMsg');
+            var scoreCta = document.getElementById('scoreCta');
+            function renderScore() {
+                var total = answers.reduce(function (a, b) { return a + b; }, 0);
+                var done = answers.filter(Boolean).length;
+                scoreValue.textContent = total;
+                scoreBar.style.width = (total / 25 * 100) + '%';
+                if (done < QUESTIONS.length) {
+                    scoreTier.textContent = (QUESTIONS.length - done) + ' to go';
+                    scoreMsg.textContent = 'Keep going. Your result and the chapter your team needs most will show up here.';
+                    return;
+                }
+                // Same bands as the book's 75-point scorecard, scaled to 25 (60/75, 40/75).
+                var lowest = answers.indexOf(Math.min.apply(null, answers));
+                var weak = QUESTIONS[lowest];
+                var tier, msg;
+                if (total >= 20) {
+                    tier = 'Dynasty mode';
+                    msg = 'You’re doing the work. The risk now is complacency. Chapter 6 shows how champions lose it.';
+                } else if (total >= 14) {
+                    tier = 'Contender';
+                    msg = 'Real strengths, real gaps. Your lowest pillar is ' + weak.pillar + ', so start with ' + weak.chapter + '.';
+                } else {
+                    tier = 'Rebuilding';
+                    msg = 'No shame in it. Every dynasty in the book started here. Your lowest pillar is ' + weak.pillar + ' (' + weak.chapter + ').';
+                }
+                scoreTier.textContent = tier;
+                scoreMsg.textContent = msg;
+                scoreCta.textContent = converted ? 'Check your inbox for the full scorecard' : 'Get the full 15-question scorecard';
+                quizResult = { score: total, tier: tier, weakest: weak.pillar };
+            }
+            var quizResult = null;
+
+            /* ---------- Lead form ---------- */
+            var form = document.getElementById('ebookForm');
+            var submitBtn = document.getElementById('submitBtn');
+            var btnLabel = submitBtn.querySelector('.btn-label');
+            var errorSummary = document.getElementById('errorSummary');
+            var errorList = document.getElementById('errorList');
+            var submitError = document.getElementById('submitError');
+            var emailHint = document.getElementById('emailHint');
+            var fields = {
+                firstName: { el: document.getElementById('firstName'), err: document.getElementById('firstNameError'), touched: false },
+                email: { el: document.getElementById('email'), err: document.getElementById('emailError'), touched: false }
+            };
+            var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+            var DOMAIN_FIXES = {
+                'gmial.com': 'gmail.com', 'gmai.com': 'gmail.com', 'gmail.co': 'gmail.com', 'gamil.com': 'gmail.com', 'gnail.com': 'gmail.com', 'gmail.con': 'gmail.com',
+                'hotmial.com': 'hotmail.com', 'hotmail.co': 'hotmail.com', 'hotmai.com': 'hotmail.com',
+                'outlok.com': 'outlook.com', 'outlook.co': 'outlook.com', 'yahoo.co': 'yahoo.com', 'yaho.com': 'yahoo.com',
+                'iclod.com': 'icloud.com', 'icloud.co': 'icloud.com'
+            };
+
+            function validate(name) {
+                var f = fields[name];
+                var v = f.el.value.trim();
+                var msg = '';
+                if (name === 'firstName' && !v) msg = 'Enter your first name.';
+                if (name === 'email') {
+                    if (!v) msg = 'Enter your email address.';
+                    else if (!EMAIL_RE.test(v)) msg = 'Enter an email address like name@company.com.';
+                }
+                f.el.setAttribute('aria-invalid', msg ? 'true' : 'false');
+                f.err.hidden = !msg;
+                f.err.textContent = msg;
+                return msg;
+            }
+
+            function suggestEmail() {
+                var v = fields.email.el.value.trim();
+                var at = v.lastIndexOf('@');
+                emailHint.hidden = true;
+                if (at < 1) return;
+                var domain = v.slice(at + 1).toLowerCase();
+                var fix = DOMAIN_FIXES[domain];
+                if (!fix) return;
+                var suggestion = v.slice(0, at + 1) + fix;
+                emailHint.innerHTML = '';
+                emailHint.append('Did you mean ');
+                var b = document.createElement('button');
+                b.type = 'button';
+                b.textContent = suggestion;
+                b.addEventListener('click', function () {
+                    fields.email.el.value = suggestion;
+                    emailHint.hidden = true;
+                    validate('email');
+                    fields.email.el.focus();
+                });
+                emailHint.append(b, '?');
+                emailHint.hidden = false;
+            }
+
+            Object.keys(fields).forEach(function (name) {
+                var f = fields[name];
+                f.el.addEventListener('blur', function () {
+                    if (f.el.value.trim() || f.touched) { f.touched = true; validate(name); }
+                    if (name === 'email') suggestEmail();
+                });
+                f.el.addEventListener('input', function () {
+                    if (f.touched) validate(name);
+                });
+            });
+
+            function setLoading(on) {
+                submitBtn.disabled = on;
+                submitBtn.classList.toggle('is-loading', on);
+                submitBtn.setAttribute('aria-busy', on ? 'true' : 'false');
+                btnLabel.textContent = on ? 'Sending your copy…' : 'Send me the e-book';
+            }
+
+            function track(eventName, data) {
+                try {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push(Object.assign({ event: eventName }, data || {}));
+                    if (typeof window.fbq === 'function') window.fbq('track', 'Lead', { content_name: 'Dynasty e-book' });
+                    if (typeof window.lintrk === 'function' && window.LINKEDIN_CONVERSION_ID) window.lintrk('track', { conversion_id: window.LINKEDIN_CONVERSION_ID });
+                    if (typeof window.gtag === 'function') window.gtag('event', 'generate_lead', { item_name: 'Dynasty e-book' });
+                } catch (e) { /* analytics must never block delivery */ }
+            }
+
+            function showSuccess(email) {
+                converted = true;
+                updateSticky();
+                document.getElementById('formView').hidden = true;
+                var sv = document.getElementById('successView');
+                document.getElementById('successEmail').textContent = email;
+                sv.hidden = false;
+                sv.focus();
+                if (quizResult) scoreCta.textContent = 'Check your inbox for the full scorecard';
+            }
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                submitError.hidden = true;
+
+                Object.keys(fields).forEach(function (n) { fields[n].touched = true; });
+                var problems = [];
+                ['firstName', 'email'].forEach(function (n) {
+                    var m = validate(n);
+                    if (m) problems.push({ id: fields[n].el.id, msg: m });
+                });
+                if (problems.length) {
+                    errorList.innerHTML = '';
+                    problems.forEach(function (p) {
+                        var li = document.createElement('li');
+                        var a = document.createElement('a');
+                        a.href = '#' + p.id;
+                        a.textContent = p.msg;
+                        a.addEventListener('click', function (ev) { ev.preventDefault(); document.getElementById(p.id).focus(); });
+                        li.appendChild(a);
+                        errorList.appendChild(li);
+                    });
+                    errorSummary.hidden = false;
+                    errorSummary.focus();
+                    return;
+                }
+                errorSummary.hidden = true;
+
+                // Bots fill the hidden field; pretend success so they don't retry.
+                if (form.website.value) { showSuccess(fields.email.el.value.trim()); return; }
+
+                var endpoint = form.getAttribute('data-endpoint') || '';
+                var email = fields.email.el.value.trim();
+                var payload = Object.assign({
+                    firstName: fields.firstName.el.value.trim(),
+                    email: email,
+                    consent: form.consent.checked ? 'yes' : 'no',
+                    quizScore: quizResult ? quizResult.score : '',
+                    quizTier: quizResult ? quizResult.tier : '',
+                    quizWeakest: quizResult ? quizResult.weakest : '',
+                    pageUrl: window.location.href.slice(0, 500),
+                    userAgent: navigator.userAgent.slice(0, 300)
+                }, attribution);
+
+                if (!/^https:\/\//.test(endpoint)) {
+                    console.error('[Dynasty] Form endpoint is not configured. Set data-endpoint on #ebookForm to the Apps Script web app URL.');
+                    submitError.hidden = false;
+                    submitError.focus();
+                    return;
+                }
+
+                setLoading(true);
+                var controller = 'AbortController' in window ? new AbortController() : null;
+                var timer = setTimeout(function () { if (controller) controller.abort(); }, 20000);
+
+                // text/plain keeps this a "simple" CORS request, so Apps Script doesn't need a preflight.
+                fetch(endpoint, {
+                    method: 'POST',
+                    body: JSON.stringify(payload),
+                    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                    redirect: 'follow',
+                    signal: controller ? controller.signal : undefined
+                })
+                    .then(function (res) { return res.json().catch(function () { return { ok: res.ok }; }); })
+                    .then(function (data) {
+                        clearTimeout(timer);
+                        setLoading(false);
+                        if (data && data.ok) {
+                            track('ebook_signup', { ebook: 'dynasty' });
+                            showSuccess(email);
+                        } else if (data && data.error === 'invalid_email') {
+                            fields.email.err.textContent = 'That email address doesn’t look right. Please check it.';
+                            fields.email.err.hidden = false;
+                            fields.email.el.setAttribute('aria-invalid', 'true');
+                            fields.email.el.focus();
+                        } else {
+                            submitError.hidden = false;
+                            submitError.focus();
+                        }
+                    })
+                    .catch(function () {
+                        clearTimeout(timer);
+                        setLoading(false);
+                        submitError.hidden = false;
+                        submitError.focus();
+                    });
+            });
+        })();
+    </script>
+</body>
+
+</html>
