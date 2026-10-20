@@ -13,7 +13,7 @@ This folder is excluded from the Docker image (`.dockerignore`), so the script i
 
 1. **Export the final PDF.** Open `Dynasty_Revised_v4.docx` in Word and choose File → Save As → PDF. The `Dynasty- Building Championship Teams… .pdf` in iCloud is older (Aug 14) than v4 (Sep 3), so don't use that one.
 2. **Upload it to Google Drive** while signed in as the account the emails should come from (for example brad@candidatehub.io). Keep it private; the script attaches it to each email, so nobody needs a share link. Open the file and copy its ID from the URL: `https://drive.google.com/file/d/<THIS_PART>/view`.
-3. **Create the lead sheet.** Make a new Google Sheet (for example "Dynasty e-book leads"), then go to **Extensions → Apps Script**.
+3. **Open the lead sheet.** It already exists, with its header row: [Dynasty E-Book Leads](https://docs.google.com/spreadsheets/d/1Z5WncT2d3VnwHAPDQO206BcoO8NzOlzYdoUdCytJ5t4/edit) in the Sales folder on Drive. Go to **Extensions → Apps Script**. The first time `setup` runs, the script renames the first tab to "Leads".
 4. **Paste the script.** Replace everything in `Code.gs` with the contents of [Code.gs](Code.gs) and save.
 5. **Add script properties.** Go to **Project Settings (gear icon) → Script properties** and add:
    | Property | Value |

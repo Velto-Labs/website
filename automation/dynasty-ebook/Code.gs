@@ -151,9 +151,18 @@ function notify_(firstName, email, data) {
 
 function sheet_() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
-  var sh = ss.getSheetByName(CONFIG.SHEET_NAME) || ss.insertSheet(CONFIG.SHEET_NAME);
-  if (sh.getLastRow() === 0) {
-    sh.appendRow(HEADERS);
+  var sh = ss.getSheetByName(CONFIG.SHEET_NAME);
+  if (!sh) {
+    // Adopt the first tab if it already has our header row (the sheet was created with it).
+    var first = ss.getSheets()[0];
+    if (first.getRange(1, 1).getValue() === HEADERS[0]) {
+      sh = first.setName(CONFIG.SHEET_NAME);
+    } else {
+      sh = ss.insertSheet(CONFIG.SHEET_NAME);
+    }
+  }
+  if (sh.getLastRow() === 0) sh.appendRow(HEADERS);
+  if (sh.getFrozenRows() === 0) {
     sh.setFrozenRows(1);
     sh.getRange(1, 1, 1, HEADERS.length).setFontWeight('bold');
   }
